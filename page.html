@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <link rel="stylesheet" href="options.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="pageScript.js"> </script>
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+  </head>
+<body>
+<div class="container">
+  <h4>YTNotion</h4>
+  <form id="configForm">
+    <div class="form-group">
+      <input type="text" class="form-control" id="formID" placeholder="Enter Database ID" required>
+    </div>
+    <button type="submit"  class="btn btn-primary" id="buttonID" onclick="executeLink()">Create Link</button>
+  </form>
+  <div id="successMessage" style="display: none; color: green;">Successfully submitted!</div>
+</div>
+</body>
+</html>
