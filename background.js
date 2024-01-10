@@ -5,14 +5,32 @@ chrome.runtime.onInstalled.addListener( data =>  {
     chrome.tabs.create({ url: chrome.runtime.getURL("page.html") });
 });
 
-chrome.action.onClicked.addListener((tab) => {
+chrome.action.onClicked.addListener(async (tab) => {
     if(!icon){
         chrome.action.setIcon({
             path : {
               "19": "assets/checked.png"
             }
         });
-        icon = true; 
+        
+        const name = "When Management is the Problem | Reaction";
+        const URL = "https://www.youtube.com/watch?v=8R8NZEEzfNM"
+        const author = "NeetCodeIO"
+
+        const data =  { name, URL, author };
+        const options = {
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    };
+    const db_response = await fetch('/api', options);
+    const db_json = await db_response.json();
+    console.log(db_json);
+
+
+    icon = true; 
     } //when clicked , the green button changes 
     else { 
         chrome.action.setIcon({

@@ -1,0 +1,21 @@
+{
+  "name": "youtubenotion",
+  "version": "1.0.0",
+  "description": "Google extension to add youtube urls to notion databases",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "notion",
+    "database",
+    "youtube",
+    "google_extension"
+  ],
+  "author": "Sriram Malarvizhi Kumaran",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
+  }
+}
